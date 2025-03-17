@@ -4,9 +4,9 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      # - uses: actions/checkout@v4
-      # - name: Install root dependencies
-      #   run: npm ci
+      - uses: actions/checkout@v4
+      - name: Install root dependencies
+        run: npm ci
 
       - name: Start server in the background
         run: npm start &        
@@ -15,7 +15,9 @@ jobs:
       # https://github.com/cypress-io/github-action
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        # with:
+        env:
+          CYPRESS_BASE_URL: http://localhost:8080
+        # with:          
         #   wait-on: 'http://[::1]:3000'
       # after the test run completes
       # store videos and any screenshots
