@@ -8,8 +8,8 @@ jobs:
       - name: Install root dependencies
         run: npm ci
 
-      - name: Start server in the background
-        run: npm start &        
+      # - name: Start server in the background
+      #   run: npm start &        
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       # https://github.com/cypress-io/github-action
