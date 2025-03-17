@@ -4,12 +4,12 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - name: Install root dependencies
-        run: npm ci
+      # - uses: actions/checkout@v4
+      # - name: Install root dependencies
+      #   run: npm ci
 
-      # - name: Start server in the background
-      #   run: npm start &        
+      - name: Start server in the background
+        run: npm start &        
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       # https://github.com/cypress-io/github-action
