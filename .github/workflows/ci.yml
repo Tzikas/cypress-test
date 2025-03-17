@@ -15,10 +15,10 @@ jobs:
       # https://github.com/cypress-io/github-action
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        env:
-          CYPRESS_BASE_URL: http://localhost:8080
-        # with:          
-        #   wait-on: 'http://[::1]:3000'
+        # env:
+        #   CYPRESS_BASE_URL: http://localhost:8080
+        with:          
+          wait-on: 'http://[::1]:3000'
       # after the test run completes
       # store videos and any screenshots
       # NOTE: screenshots will be generated only if E2E test failed
